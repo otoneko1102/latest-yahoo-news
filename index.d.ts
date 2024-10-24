@@ -3,6 +3,7 @@ export type NewsCategory = 'top' | 'business' | 'entertainment' | 'sports' | 'do
 export interface NewsItem {
   title: string;
   link: string;
+  description: string,
   pubDate: number;
   image?: string;
 }
