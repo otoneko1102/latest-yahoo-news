@@ -24,7 +24,7 @@ async function yahooNews(category = 'top') {
 
       return {
         title: item.title[0],
-        link: item.link[0],
+        link: item.link[0].endsWith('?source=rss') ? item.link[0].slice(0, -'?source=rss'.length) : item.link[0],
         description: description,
         pubDate: new Date(item.pubDate[0]).getTime(),
         image: image

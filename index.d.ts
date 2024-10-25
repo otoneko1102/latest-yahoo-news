@@ -20,4 +20,4 @@ export interface FetchYahooNewsResult {
  */
 declare function yahooNews(category?: NewsCategory): Promise<FetchYahooNewsResult>;
 
-export = yahooNews;
+export default yahooNews;
