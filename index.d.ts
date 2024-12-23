@@ -1,4 +1,4 @@
-export type NewsCategory = 'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local';
+export type NewsCategory = 'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local' | 'en';
 
 export interface NewsItem {
   title: string;
@@ -14,9 +14,12 @@ export interface FetchYahooNewsResult {
 }
 
 /**
+ * @async
+ * @function
+ * Get the latest news list from Yahoo!News.
  * Yahoo!ニュースの最新ニュース一覧を取得します。
- * @param {NewsCategory} category - 取得するニュースのカテゴリ
- * @returns {Promise<FetchYahooNewsResult>} ニュースデータ
+ * @param {NewsCategory} category - 取得するニュースのカテゴリ / News categry.
+ * @returns {Promise<FetchYahooNewsResult>} ニュースデータ / News data.
  */
 declare function yahooNews(category?: NewsCategory): Promise<FetchYahooNewsResult>;
 

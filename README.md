@@ -1,19 +1,28 @@
 # latest-yahoo-news
+Get the latest news list from Yahoo!News.<br>
 Yahoo!ニュースの最新ニュース一覧を取得します。
 
-## 使い方
-### 例
+> `3.0.0 <= x` supports English!
+
+###### Teams
+<a href="https://oto.pet/"><img src="https://www.otoneko.cat/img/logo.png" alt="OTONEKO.CAT" style="display: block; width: auto; height: 100px;"/></a>
+<a href="https://www.otoho.me/"><img src="https://www.otoho.me/img/logo.png" alt="Oto Home" style="display: block; width: auto; height: 100px;"/></a>
+
+## Usage
+### Example
 ```js
 const yahooNews = require('latest-yahoo-news');
 
-// 任意。デフォルトで 'top' が指定される。
-const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local'
+// Optional. Default is 'top'.
+const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local' | 'en'
 (async () => {
   console.log(await yahooNews(category));
 })();
 ```
 
-### 結果 (2024/10/25 09:00 時点)
+### Result (2024/10/25 09:00)
+> If category is `en`, `news.description` is news source URL.<br>
+> カテゴリが `en` の場合、 `news.description` はニュースソースの URL です。
 ```
 {
   success: true,
@@ -77,7 +86,8 @@ const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'do
   ]
 }
 ```
-> 重要: 取得に失敗した場合 success: false になります。
+> If retrieval fails, returns `success: false`.<br>
+> 重要: 取得に失敗した場合 `success: false` になります。
 
 ## Get Support
 <a href="https://discord.gg/yKW8wWKCnS"><img src="https://discordapp.com/api/guilds/1005287561582878800/widget.png?style=banner4" alt="Discord Banner"/></a>

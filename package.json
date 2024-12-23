@@ -1,7 +1,7 @@
 {
   "name": "latest-yahoo-news",
-  "version": "2.1.3",
-  "description": "Yahoo!ニュースの最新ニュース一覧を取得します。",
+  "version": "3.0.0",
+  "description": "Get the latest news list from Yahoo!News. / Yahoo!ニュースの最新ニュース一覧を取得します。",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -16,6 +16,11 @@
     "news",
     "latest",
     "free",
+    "rss",
+    "api",
+    "data",
+    "en",
+    "english",
     "jp",
     "japan",
     "japanese"
