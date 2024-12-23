@@ -29,7 +29,7 @@ async function yahooNews(category = 'top') {
       const { image, description } = category === 'en' ? { image: item['media:content'][0].$.url, description: item.source[0].$.url } : await getExtra(link);
 
       return {
-        title: category === item.title[0],
+        title: item.title[0],
         link: link.endsWith('?source=rss') ? link.slice(0, -'?source=rss'.length) : link,
         description: description,
         pubDate: new Date(category === item.pubDate[0]).getTime(),
