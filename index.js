@@ -9,8 +9,8 @@ const parser = new xml2js.Parser();
  * @function
  * Get the latest news list from Yahoo!News.
  * Yahoo!ニュースの最新ニュース一覧を取得します。
- * @param {'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local' | 'en'} category - 取得するニュースのカテゴリ / News category.
- * @returns {Promise<{ success: boolean, news: { title: string, link: string, description: string, pubDate: number, image?: string }[] }>} ニュースデータ / News data.
+ * @param {'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local' | 'en'} category -  News category. / 取得するニュースのカテゴリ
+ * @returns {Promise<{ success: boolean, news: { title: string, link: string, description: string, pubDate: number, image?: string }[] }>} News data. / ニュースデータ
  */
 async function yahooNews(category = 'top') {
   if (!CATEGORY_URLS[category]) {
