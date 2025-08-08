@@ -1,15 +1,14 @@
 # latest-yahoo-news
-Get the latest news list from Yahoo!News.<br>
+
+Get the latest news list from Yahoo!News.  
 Yahoo!ニュースの最新ニュース一覧を取得します。
 
 > `3.0.0 <= x` supports English!
 
-###### Teams
-<a href="https://oto.pet/"><img src="https://www.otoneko.cat/img/logo.png" alt="OTONEKO.CAT" style="display: block; width: auto; height: 100px;"/></a>
-<a href="https://www.otoho.me/"><img src="https://www.otoho.me/img/logo.png" alt="Oto Home" style="display: block; width: auto; height: 100px;"/></a>
-
 ## Usage
+
 ### Example
+
 ```js
 const yahooNews = require('latest-yahoo-news');
 
@@ -21,9 +20,11 @@ const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'do
 ```
 
 ### Result (2024/10/25 09:00)
-> If category is `en`, `news.description` is news source URL.<br>
+
+> If category is `en`, `news.description` is news source URL.  
 > カテゴリが `en` の場合、 `news.description` はニュースソースの URL です。
-```
+
+```js
 {
   success: true,
   news: [
@@ -86,8 +87,6 @@ const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'do
   ]
 }
 ```
-> If retrieval fails, returns `success: false`.<br>
-> 重要: 取得に失敗した場合 `success: false` になります。
 
-## Get Support
-<a href="https://discord.gg/yKW8wWKCnS"><img src="https://discordapp.com/api/guilds/1005287561582878800/widget.png?style=banner4" alt="Discord Banner"/></a>
+> If retrieval fails, returns `success: false`.  
+> 重要: 取得に失敗した場合 `success: false` になります。
