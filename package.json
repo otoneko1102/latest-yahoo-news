@@ -33,7 +33,7 @@
   "homepage": "https://github.com/otoneko1102/latest-yahoo-news#readme",
   "dependencies": {
     "axios": "^1.11.0",
-    "cheerio": "^1.1.2",
+    "cheerio": "^1.2.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
