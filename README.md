@@ -1,8 +1,13 @@
 # latest-yahoo-news
 
+> [!Caution]  
+> このパッケージはもうサポートされていません。  
+> This package is no longer supported.
+
 Get the latest news list from Yahoo!News.  
 Yahoo!ニュースの最新ニュース一覧を取得します。
 
+> [!Note]  
 > `3.0.0 <= x` supports English!
 
 ## Usage
@@ -21,6 +26,7 @@ const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'do
 
 ### Result (2024/10/25 09:00)
 
+> [!Note]  
 > If category is `en`, `news.description` is news source URL.  
 > カテゴリが `en` の場合、 `news.description` はニュースソースの URL です。
 
@@ -88,5 +94,6 @@ const category = 'top'; // 'top' | 'business' | 'entertainment' | 'sports' | 'do
 }
 ```
 
+> [!Important]  
 > If retrieval fails, returns `success: false`.  
 > 重要: 取得に失敗した場合 `success: false` になります。
