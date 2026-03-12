@@ -1,6 +1,6 @@
 {
   "name": "latest-yahoo-news",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Get the latest news list from Yahoo!News. / Yahoo!ニュースの最新ニュース一覧を取得します。",
   "main": "index.js",
   "types": "index.d.ts",

@@ -1,26 +1,54 @@
-export type NewsCategory = 'top' | 'business' | 'entertainment' | 'sports' | 'domestic' | 'it' | 'science' | 'world' | 'local' | 'en';
+// 型定義ファイル for latest-yahoo-news
 
+export type NewsCategory =
+  | 'top'
+  | 'business'
+  | 'entertainment'
+  | 'sports'
+  | 'domestic'
+  | 'it'
+  | 'science'
+  | 'world'
+  | 'local'
+  | 'en';
+
+/**
+ * ニュースアイテムの型定義
+ */
 export interface NewsItem {
+  /** ニュースのタイトル */
   title: string;
+  /** ニュースのリンク */
   link: string;
-  description?: string,
+  /** ニュースの説明（オプション） */
+  description?: string;
+  /** 公開日時（Unixタイムスタンプ） */
   pubDate: number;
+  /** ニュース画像のURL（オプション） */
   image?: string;
 }
 
+/**
+ * ニュース取得結果の型定義
+ */
 export interface FetchYahooNewsResult {
+  /** 成功フラグ */
   success: boolean;
+  /** ニュースアイテムの配列 */
   news: NewsItem[];
 }
 
 /**
- * @async
- * @function
- * Get the latest news list from Yahoo!News.
- * Yahoo!ニュースの最新ニュース一覧を取得します。
- * @param {NewsCategory} category - 取得するニュースのカテゴリ / News categry.
- * @returns {Promise<FetchYahooNewsResult>} ニュースデータ / News data.
+ * Yahoo!ニュースの最新ニュース一覧を取得する非同期関数
+ * @returns {Promise<FetchYahooNewsResult>} ニュース取得結果
  */
-declare function yahooNews(category?: NewsCategory): Promise<FetchYahooNewsResult>;
+export declare function fetchYahooNews(): Promise<FetchYahooNewsResult>;
 
-export default yahooNews;
+/**
+ * パッケージのデフォルトエクスポート
+ */
+declare const latestYahooNews: {
+  fetchYahooNews: typeof fetchYahooNews;
+};
+
+export default latestYahooNews;
